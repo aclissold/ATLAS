@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(title: String, page: String)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +15,11 @@
     <link href="@routes.Assets.at("css/bootstrap.min.css")" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="@routes.Assets.at("js/jquery.min.js")"></script>
+    <!-- Bootstrap plugins -->
+    <script src="@routes.Assets.at("js/bootstrap.min.js")"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,10 +29,6 @@
   </head>
   <body>
     @content
-    @navbar()
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="@routes.Assets.at("js/jquery.min.js")"></script>
-    <!-- Bootstrap plugins -->
-    <script src="@routes.Assets.at("js/bootstrap.min.js")"></script>
+    @navbar(page)
   </body>
 </html>
