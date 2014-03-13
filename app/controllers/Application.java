@@ -12,11 +12,23 @@ public class Application extends Controller {
     }
 
     public static Result about() {
-        return TODO;
+        return ok(about.render());
     }
 
     public static Result contact() {
-        return TODO;
+        return ok(contact.render());
+    }
+
+    public static Result saturn() {
+        return ok(saturn.render());
+    }
+
+    public static Result jupiter() {
+        return ok(jupiter.render());
+    }
+
+    public static Result mercury() {
+        return ok(mercury.render());
     }
 
 }
