@@ -1,12 +1,6 @@
 @(message: String)
 
 @main("Assignment 4", "Index") {
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="styles/styles.css" rel="stylesheet">
-    </head>
-<body>
     <div id="container" class="container">
         <ul id="scene" class="scene">
             <li class="layer" data-depth="0.80"><img class="neptune" src="/assets/img/neptune.png"></li>
@@ -20,21 +14,19 @@
         </ul>
     </div>
 
-<script src="/assets/js/parallax.js"></script>
-<script>
-    var scene = document.getElementById('scene');
-    var parallax = new Parallax(scene, {
-      invertX: true,
-      invertY: true,
-      limitX: 15,
-      limitY: 10,
-      scalarX: 5,
-      scalarY: 8,
-      frictionX: 0.8,
-      frictionY: 0.8
-    });
-</script>
-</html>
-
+    <script src="@routes.Assets.at("/js/parallax.js")"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene, {
+            invertX: true,
+            invertY: true,
+            limitX: 15,
+            limitY: 10,
+            scalarX: 5,
+            scalarY: 8,
+            frictionX: 0.8,
+            frictionY: 0.8
+        });
+    </script>
 
 }
