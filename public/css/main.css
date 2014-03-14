@@ -12,3 +12,25 @@ body {
   padding: 60px 20px;
   width: 100%
 }
+
+.description-box {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  max-width: 600px;
+  margin: 100px auto 0;
+}
+
+h1.description-title {
+  color: #222;
+  text-align: right;
+  padding: 0.5em 0.5em 0 0;
+}
+
+p.description-text {
+  font-size: 20pt;
+  padding: 0 0.5em 0.5em 0.5em;
+  text-align: justify;
+}

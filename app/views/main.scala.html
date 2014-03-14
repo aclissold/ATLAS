@@ -19,6 +19,8 @@
     <script src="@routes.Assets.at("js/jquery.min.js")"></script>
     <!-- Bootstrap plugins -->
     <script src="@routes.Assets.at("js/bootstrap.min.js")"></script>
+    <!-- Hyphenator for justified text -->
+    <script src="@routes.Assets.at("js/Hyphenator.js")"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +30,11 @@
     <![endif]-->
   </head>
   <body>
-    @content
+    <div class="description-box">
+      <h1 class="description-title">@page</h1>
+      <p class="description-text hyphenate">@content</p>
+    </div>
     @navbar(page)
+    <script>Hyphenator.run();</script>
   </body>
 </html>
