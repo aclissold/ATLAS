@@ -1,7 +1,7 @@
 @(title: String, page: String)(content: Html)
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
   </head>
   <body>
     @if(page == "Index") {
-      @parallax()
+      @content
     } else {
       <div class="description-box">
         <h1 class="description-title">@page</h1>
