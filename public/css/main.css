@@ -34,3 +34,68 @@ p.description-text {
   padding: 0 0.5em 0.5em 0.5em;
   text-align: justify;
 }
+
+.neptune {
+  position:fixed;
+  right: 5%;
+  margin-top: 1%;
+  width:9%;
+  height:auto;
+}
+
+.uranus {
+  position:fixed;
+  right: 12%;
+  margin-top: 2%;
+  width:11%;
+  height:auto;
+}
+
+.saturn {
+  position:fixed;
+  right: 18%;
+  margin-top: 6%;
+  width:25%;
+  height:auto;
+}
+
+.jupiter {
+  position:fixed;
+  right: 40%;
+  margin-top: 10%;
+  width:20%;
+  height:auto;
+}
+
+.mars {
+  position:fixed;
+  right: 59%;
+  margin-top: 21%;
+  width:8%;
+  height:auto;
+}
+
+.earth {
+  position:fixed;
+  right: 67%;
+  margin-top: 23%;
+  width:10%;
+  height:auto;
+}
+
+.venus {
+  position:fixed;
+  right: 77%;
+  margin-top: 27%;
+  width:9.5%;
+  height:auto;
+}
+
+.mercury {
+  position:fixed;
+  right: 88%;
+  margin-top: 32%;
+  width:6%;
+  height:auto;
+}
+
