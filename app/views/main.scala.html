@@ -30,10 +30,14 @@
     <![endif]-->
   </head>
   <body>
-    <div class="description-box">
-      <h1 class="description-title">@page</h1>
-      <p class="description-text hyphenate">@content</p>
-    </div>
+    @if(page == "Index") {
+      @parallax()
+    } else {
+      <div class="description-box">
+        <h1 class="description-title">@page</h1>
+        <p class="description-text hyphenate">@content</p>
+      </div>
+    }
     @navbar(page)
     <script>Hyphenator.run();</script>
   </body>
