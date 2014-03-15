@@ -1,41 +1,45 @@
 body {
-  background: url(/assets/img/space.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url(/assets/img/space.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #parallax-placeholder {
-  background-color: papayawhip;
-  margin-top: -20px;
-  padding: 60px 20px;
-  width: 100%
+    background-color: papayawhip;
+    margin-top: -20px;
+    padding: 60px 20px;
+    width: 100%
 }
 
 .description-box {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -o-border-radius: 15px;
-  max-width: 600px;
-  margin: 100px auto 0;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    max-width: 600px;
+    margin: 100px auto 0;
 }
 
 h1.description-title {
-  color: #222;
-  text-align: right;
-  padding: 0.5em 0.5em 0 0;
+    color: #222;
+    text-align: right;
+    padding: 0.5em 0.5em 0 0;
 }
 
 p.description-text {
-  font-size: 20pt;
-  padding: 0 0.5em 0.5em 0.5em;
-  text-align: justify;
+    font-size: 20pt;
+    padding: 0 0.5em 0.5em 0.5em;
+    text-align: justify;
 }
 
 .planet {
+    position:fixed;
+    height:auto;
+
+    /* glow effect */
     border-radius: 50%;
     transition: 0.25s cubic-bezier(0, 0, 0.8, 1.5);
     -webkit-transition: 0.25s cubic-bezier(0, 0, 0.8, 1.5);
@@ -46,19 +50,15 @@ p.description-text {
 }
 
 .neptune {
-  position:fixed;
-  right: 5%;
-  margin-top: 1%;
-  width:9%;
-  height:auto;
+    right: 5%;
+    margin-top: 1%;
+    width:9%;
 }
 
 .uranus {
-  position:fixed;
-  right: 12%;
-  margin-top: 2%;
-  width:11%;
-  height:auto;
+    right: 12%;
+    margin-top: 2%;
+    width:11%;
 }
 
 .uranus-rings {
@@ -70,11 +70,9 @@ p.description-text {
 }
 
 .saturn {
-  position:fixed;
-  right: 25%;
-  margin-top: 6%;
-  width:15%;
-  height:auto;
+    right: 25%;
+    margin-top: 6%;
+    width:15%;
 }
 
 .saturn-rings {
@@ -86,41 +84,31 @@ p.description-text {
 }
 
 .jupiter {
-  position:fixed;
-  right: 40%;
-  margin-top: 10%;
-  width:20%;
-  height:auto;
+    right: 40%;
+    margin-top: 10%;
+    width:20%;
 }
 
 .mars {
-  position:fixed;
-  right: 59%;
-  margin-top: 21%;
-  width:8%;
-  height:auto;
+    right: 59%;
+    margin-top: 21%;
+    width:8%;
 }
 
 .earth {
-  position:fixed;
-  right: 67%;
-  margin-top: 23%;
-  width:10%;
-  height:auto;
+    right: 67%;
+    margin-top: 23%;
+    width:10%;
 }
 
 .venus {
-  position:fixed;
-  right: 77%;
-  margin-top: 27%;
-  width:9.5%;
-  height:auto;
+    right: 77%;
+    margin-top: 27%;
+    width:9.5%;
 }
 
 .mercury {
-  position:fixed;
-  right: 88%;
-  margin-top: 32%;
-  width:6%;
-  height:auto;
+    right: 88%;
+    margin-top: 32%;
+    width:6%;
 }

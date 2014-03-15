@@ -2,28 +2,28 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 <div class="container-fluid">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Assignment 4</a>
-  </div><!-- /.navbar-header -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Assignment 4</a>
+    </div><!-- /.navbar-header -->
 
-  <div class="collapse navbar-collapse" id="navbar-collapse">
-    <ul class="nav navbar-nav">
-      <li><a href="@routes.Application.about()">About</a></li>
-      <li><a href="@routes.Application.contact()">Contact</a></li>
-      <li><a href="@routes.Application.saturn()">Saturn</a></li>
-      <li><a href="@routes.Application.jupiter()">Jupiter</a></li>
-      <li><a href="@routes.Application.mercury()">Mercury</a></li>
-    </ul>
-  </div><!-- /.navbar-collapse --!>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="@routes.Application.about()">About</a></li>
+            <li><a href="@routes.Application.contact()">Contact</a></li>
+            <li><a href="@routes.Application.saturn()">Saturn</a></li>
+            <li><a href="@routes.Application.jupiter()">Jupiter</a></li>
+            <li><a href="@routes.Application.mercury()">Mercury</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse --!>
 </div><!-- /.container-fluid -->
 </nav>
 
 <script>
-  $('a:contains("@page")').parent().addClass('active');
+    $('a:contains("@page")').parent().addClass('active');
 </script>
