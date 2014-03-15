@@ -35,6 +35,16 @@ p.description-text {
   text-align: justify;
 }
 
+.planet {
+    border-radius: 50%;
+    transition: 0.25s cubic-bezier(0, 0, 0.8, 1.5);
+    -webkit-transition: 0.25s cubic-bezier(0, 0, 0.8, 1.5);
+}
+
+.planet:active, .planet:hover, .planet:focus, .planet.hover {
+    box-shadow: white 0 0 75px 0;
+}
+
 .neptune {
   position:fixed;
   right: 5%;
@@ -51,12 +61,28 @@ p.description-text {
   height:auto;
 }
 
+.uranus-rings {
+    position: fixed;
+    right: 12%;
+    margin-top: -2%;
+    width: 12%;
+    height: auto;
+}
+
 .saturn {
   position:fixed;
-  right: 18%;
+  right: 25%;
   margin-top: 6%;
-  width:25%;
+  width:15%;
   height:auto;
+}
+
+.saturn-rings {
+    position: fixed;
+    right: 19%;
+    margin-top: 6%;
+    width: 25%;
+    height: auto;
 }
 
 .jupiter {
@@ -98,4 +124,3 @@ p.description-text {
   width:6%;
   height:auto;
 }
-
