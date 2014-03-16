@@ -114,26 +114,23 @@ p.description-text {
     width:6%;
 }
 
-.side-planet-saturn {
+.side-planet-saturn, .side-planet-jupiter, .side-planet-mercury {
     position: fixed;
     float: left;
     z-index: 2;
+}
+
+.side-planet-saturn {
     top: 40%;
     left: 5%;
 }
 
 .side-planet-jupiter {
-    position: fixed;
-    float: left;
-    z-index: 2;
     top: 30%;
     left: 10%;
 }
 
 .side-planet-mercury {
-    position: fixed;
-    float: left;
-    z-index: 2;
     top: 43%;
     left: 23%;
 }
