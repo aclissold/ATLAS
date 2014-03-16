@@ -21,6 +21,7 @@ body {
     -o-border-radius: 15px;
     max-width: 600px;
     margin: 100px auto 0;
+    z-index: 1;
 }
 
 h1.description-title {
@@ -111,4 +112,28 @@ p.description-text {
     right: 88%;
     margin-top: 32%;
     width:6%;
+}
+
+.side-planet-saturn {
+    position: absolute;
+    float: left;
+    z-index: 2;
+    top: 40%;
+    left: 5%;
+}
+
+.side-planet-jupiter {
+    position: absolute;
+    float: left;
+    z-index: 2;
+    top: 30%;
+    left: 10%;
+}
+
+.side-planet-mercury {
+    position: absolute;
+    float: left;
+    z-index: 2;
+    top: 43%;
+    left: 23%;
 }
