@@ -8,9 +8,17 @@ GET     /                           controllers.Application.index()
 # Required pages
 GET     /about                      controllers.Application.about()
 GET     /contact                    controllers.Application.contact()
-GET     /planets/saturn             controllers.Application.saturn()
-GET     /planets/jupiter            controllers.Application.jupiter()
+
 GET     /planets/mercury            controllers.Application.mercury()
+GET     /planets/venus              controllers.Application.venus()
+GET     /planets/earth              controllers.Application.earth()
+GET     /planets/mars               controllers.Application.mars()
+GET     /planets/jupiter            controllers.Application.jupiter()
+GET     /planets/saturn             controllers.Application.saturn()
+GET     /planets/neptune            controllers.Application.neptune()
+GET     /planets/uranus             controllers.Application.uranus()
+
+
 
 # Custom pages
 # 1
