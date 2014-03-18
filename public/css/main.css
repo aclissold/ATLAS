@@ -36,6 +36,13 @@ p.description-text {
     text-align: justify;
 }
 
+.starfield {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
 .planet {
     position:fixed;
     height:auto;
