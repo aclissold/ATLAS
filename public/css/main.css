@@ -115,8 +115,7 @@ p.description-text {
 }
 
 .side-planet-saturn, .side-planet-jupiter, .side-planet-mercury {
-    position: fixed;
-    float: left;
+    position: absolute;
     z-index: 2;
 }
 
