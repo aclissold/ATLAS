@@ -1,4 +1,4 @@
-@(page: String)
+@(page: String)(pageAuthor: String)
 
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 <div class="container-fluid">
@@ -27,7 +27,11 @@
             <li><a href="@routes.Application.neptune()">Neptune</a></li>
 
         </ul>
-    </div><!-- /.navbar-collapse --!>
+    </div><!-- /.navbar-collapse --> 
+	
+	<p class="navbar-text navbar-right">Page made by @pageAuthor</p>
+	
+	
 </div><!-- /.container-fluid -->
 </nav>
 
