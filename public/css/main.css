@@ -59,6 +59,21 @@ p.description-text {
     text-align: justify;
 }
 
+.logo {
+	font-family: Revalia;
+	font-size: 500%;
+	color: #FFFFFF;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.logo>p {
+	text-align: right;
+	padding-right: 120px;
+	margin-top: 25%;
+}
+
 .starfield {
     position: absolute;
     width: 100%;
