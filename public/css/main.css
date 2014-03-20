@@ -61,7 +61,7 @@ p.description-text {
 
 .logo {
 	font-family: Revalia;
-	font-size: 500%;
+	font-size: 5vw;
 	color: #FFFFFF;
 	position: absolute;
 	width: 100%;
@@ -71,7 +71,7 @@ p.description-text {
 .logo>p {
 	text-align: right;
 	padding-right: 120px;
-	margin-top: 25%;
+	margin-top: 28%;
 }
 
 .starfield {
