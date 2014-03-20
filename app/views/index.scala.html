@@ -1,5 +1,8 @@
 @main("Index", "Whole Group") {
     <div id="container" class="container">
+        <ul id="scene3">
+            <li class="layer" data-depth="0.05"><img class="starfield" src="/assets/img/starfield.png"></li>
+        </ul>
         <ul id="scene2">
             <li class="layer" data-depth="0.1"><img class="starfield" src="/assets/img/starfield.png"></li>
         </ul>
@@ -39,6 +42,22 @@
           frictionX: 0.8,
           frictionY: 0.8
         });
+        var scene3 = document.getElementById('scene3');
+        var parallax3 = new Parallax(scene3, {
+            invertX: false,
+            scalarX: 50,
+            scalarY: 8,
+            frictionX: 0.8,
+            frictionY: 0.8
+        });
+
+        // Flip the bottom starfield upside-down
+        var flip = {
+            'transform': 'rotate(180deg)',
+            '-ms-transform': 'rotate(180deg)',
+            '-webkit-transform': 'rotate(180deg)'
+        };
+        $('#scene3>li>img').css(flip);
 
         // applies :hover to a planet below its rings
         $('.saturn-rings').hover(
