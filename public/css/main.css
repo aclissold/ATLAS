@@ -24,14 +24,50 @@ body {
     z-index: 1;
 }
 
-.bottom-planet {
+.description-planet {
     position: fixed;
     margin-left: 50%;
     z-index: -1;
+}
 
-    /* These two values can be adjusted on a per-planet basis: */
+.description-planet.mercury {
+    padding-left: 190px;
+    margin-top: -127px;
+}
+
+.description-planet.venus {
+    padding-left: 162px;
+    margin-top: -155px;
+}
+
+.description-planet.earth {
+    padding-left: 166px;
+    margin-top: -151px;
+}
+
+.description-planet.mars {
     padding-left: 160px;
     margin-top: -150px;
+}
+
+.description-planet.jupiter {
+    padding-left: 43px;
+    margin-top: -298px;
+}
+
+.description-planet.saturn {
+    padding-left: 26px;
+    margin-top: -238px;
+}
+
+.description-planet.uranus {
+    padding-left: 190px;
+    margin-top: -175px;
+}
+
+.description-planet.neptune {
+    padding-left: 203px;
+    margin-top: -111px;
 }
 
 .dropdown-menu {
@@ -95,13 +131,37 @@ p.description-text {
     box-shadow: white 0 0 75px 0;
 }
 
-.neptune {
-    right: 5%;
-    margin-top: 3%;
-    width:9%;
+.planet.mercury {
+    right: 88%;
+    margin-top: 34%;
+    width:6%;
 }
 
-.uranus {
+.planet.venus {
+    right: 77%;
+    margin-top: 29%;
+    width:9.5%;
+}
+
+.planet.earth {
+    right: 67%;
+    margin-top: 25%;
+    width:10%;
+}
+
+.planet.mars {
+    right: 59%;
+    margin-top: 23%;
+    width:8%;
+}
+
+.planet.jupiter {
+    right: 40%;
+    margin-top: 12%;
+    width:20%;
+}
+
+.planet.uranus {
     right: 12%;
     margin-top: 4%;
     width:11%;
@@ -115,7 +175,7 @@ p.description-text {
     height: auto;
 }
 
-.saturn {
+.planet.saturn {
     right: 25%;
     margin-top: 8%;
     width:15%;
@@ -129,32 +189,8 @@ p.description-text {
     height: auto;
 }
 
-.jupiter {
-    right: 40%;
-    margin-top: 12%;
-    width:20%;
-}
-
-.mars {
-    right: 59%;
-    margin-top: 23%;
-    width:8%;
-}
-
-.earth {
-    right: 67%;
-    margin-top: 25%;
-    width:10%;
-}
-
-.venus {
-    right: 77%;
-    margin-top: 29%;
-    width:9.5%;
-}
-
-.mercury {
-    right: 88%;
-    margin-top: 34%;
-    width:6%;
+.planet.neptune {
+    right: 5%;
+    margin-top: 3%;
+    width:9%;
 }
