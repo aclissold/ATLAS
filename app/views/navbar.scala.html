@@ -17,14 +17,19 @@
 
             <li><a href="@routes.Application.about()">About</a></li>
             <li><a href="@routes.Application.contact()">Contact</a></li>
-            <li><a href="@routes.Application.mercury()">Mercury</a></li>
-            <li><a href="@routes.Application.venus()">Venus</a></li>
-            <li><a href="@routes.Application.earth()">Earth</a></li>
-            <li><a href="@routes.Application.mars()">Mars</a></li>
-            <li><a href="@routes.Application.jupiter()">Jupiter</a></li>
-            <li><a href="@routes.Application.saturn()">Saturn</a></li>
-            <li><a href="@routes.Application.uranus()">Uranus</a></li>
-            <li><a href="@routes.Application.neptune()">Neptune</a></li>
+            <li class="dropup">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Planets <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="@routes.Application.mercury()">Mercury</a></li>
+                    <li><a href="@routes.Application.venus()">Venus</a></li>
+                    <li><a href="@routes.Application.earth()">Earth</a></li>
+                    <li><a href="@routes.Application.mars()">Mars</a></li>
+                    <li><a href="@routes.Application.jupiter()">Jupiter</a></li>
+                    <li><a href="@routes.Application.saturn()">Saturn</a></li>
+                    <li><a href="@routes.Application.uranus()">Uranus</a></li>
+                    <li><a href="@routes.Application.neptune()">Neptune</a></li>
+                </ul>
+            </li>
 
         </ul>
 

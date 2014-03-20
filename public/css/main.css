@@ -24,6 +24,19 @@ body {
     z-index: 1;
 }
 
+.dropdown-menu {
+    background-color: #080808;
+}
+
+.dropdown-menu>li>a {
+    color: #999;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    color: #999;
+    background-color: #222;
+}
+
 h1.description-title {
     color: #222;
     text-align: right;
