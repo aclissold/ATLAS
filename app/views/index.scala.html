@@ -8,6 +8,11 @@
             <li class="layer" data-depth="0.1"><img class="starfield" src="/assets/img/starfield.png"></li>
         </ul>
         <ul id="scene" class="scene">
+            <li class="layer" data-depth="1.5">
+                <div class="logo">
+                  <p>ATLAS</p>
+                </div>
+            </li>
             <li class="layer" data-depth="0.80"><a href="@routes.Application.neptune()">
             <img class="planet neptune" src="/assets/img/neptune.png"></a></li>
             <li class="layer" data-depth="0.70"><a href="@routes.Application.uranus()">
@@ -30,10 +35,7 @@
             <img class="planet mercury" src="/assets/img/mercury.png"></a></li>
         </ul>
     </div>
-    
-    <div class="logo">
-    	<p>ATLAS</p>
-    </div>
+
 
     <script src="@routes.Assets.at("/js/parallax.js")"></script>
     <script>
