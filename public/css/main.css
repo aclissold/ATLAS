@@ -24,6 +24,16 @@ body {
     z-index: 1;
 }
 
+.bottom-planet {
+    position: fixed;
+    margin-left: 50%;
+    z-index: -1;
+
+    /* These two values can be adjusted on a per-planet basis: */
+    padding-left: 160px;
+    margin-top: -150px;
+}
+
 .dropdown-menu {
     background-color: #080808;
 }
@@ -132,24 +142,4 @@ p.description-text {
     right: 88%;
     margin-top: 32%;
     width:6%;
-}
-
-.side-planet-saturn, .side-planet-jupiter, .side-planet-mercury {
-    position: absolute;
-    z-index: 2;
-}
-
-.side-planet-saturn {
-    top: 40%;
-    left: 5%;
-}
-
-.side-planet-jupiter {
-    top: 30%;
-    left: 10%;
-}
-
-.side-planet-mercury {
-    top: 43%;
-    left: 23%;
 }
