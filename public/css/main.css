@@ -6,11 +6,9 @@ body {
     background-size: cover;
 }
 
-#parallax-placeholder {
-    background-color: papayawhip;
-    margin-top: -20px;
-    padding: 60px 20px;
-    width: 100%
+a.navbar-brand {
+    font-family: Revalia;
+    text-transform: uppercase;
 }
 
 .description-box {
