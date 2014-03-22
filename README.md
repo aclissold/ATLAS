@@ -1,4 +1,8 @@
-Assignment 4
-============
+ATLAS
+=====
 
-CSE 337 Assignment 4: an exercise in Play! and Bootstrap.
+An example [Play! Framework](http://www.playframework.com/) project created as
+a class project.
+
+We ended up spending a lot more time designing a static site than taking
+advantage of Play's features!
