@@ -2,10 +2,10 @@
 
     <div id="container" class="container">
         <ul id="scene3">
-            <li class="layer" data-depth="0.05"><img class="starfield" src="/assets/img/starfield.png"></li>
+            <li class="layer" data-depth="0.05"><img class="starfield" src="@routes.Assets.at("img/starfield.png")"></li>
         </ul>
         <ul id="scene2">
-            <li class="layer" data-depth="0.1"><img class="starfield" src="/assets/img/starfield.png"></li>
+            <li class="layer" data-depth="0.1"><img class="starfield" src="@routes.Assets.at("img/starfield.png")"></li>
         </ul>
         <ul id="scene" class="scene">
             <li class="layer" data-depth="1.5">
@@ -15,30 +15,30 @@
                 </div>
             </li>
             <li class="layer" data-depth="0.80"><a href="@routes.Application.neptune()">
-            <img class="planet neptune" src="/assets/img/neptune.png"></a></li>
+            <img class="planet neptune" src="@routes.Assets.at("img/neptune.png")"></a></li>
             <li class="layer" data-depth="0.70"><a href="@routes.Application.uranus()">
-            <img class="planet uranus" src="/assets/img/uranus1.png"></a></li>
+            <img class="planet uranus" src="@routes.Assets.at("img/uranus1.png")"></a></li>
             <li class="layer" data-depth="0.70"><a href="@routes.Application.uranus()">
-            <img class="uranus-rings" src="/assets/img/uranus2.png"></a></li>
+            <img class="uranus-rings" src="@routes.Assets.at("img/uranus2.png")"></a></li>
             <li class="layer" data-depth="0.50"><a href="@routes.Application.saturn()">
-            <img class="planet saturn" src="/assets/img/saturn1.png"></a></li>
+            <img class="planet saturn" src="@routes.Assets.at("img/saturn1.png")"></a></li>
             <li class="layer" data-depth="0.50"><a href="@routes.Application.saturn()">
-            <img class="saturn-rings" src="/assets/img/saturn2.png"></a></li>
+            <img class="saturn-rings" src="@routes.Assets.at("img/saturn2.png")"></a></li>
             <li class="layer" data-depth="0.30"><a href="@routes.Application.jupiter()">
-            <img class="planet jupiter" src="/assets/img/jupiter.png"></a></li>
+            <img class="planet jupiter" src="@routes.Assets.at("img/jupiter.png")"></a></li>
             <li class="layer" data-depth="0.45"><a href="@routes.Application.mars()">
-            <img class="planet mars" src="/assets/img/mars.png"></a></li>
+            <img class="planet mars" src="@routes.Assets.at("img/mars.png")"></a></li>
             <li class="layer" data-depth="0.50"><a href="@routes.Application.earth()">
-            <img class="planet earth" src="/assets/img/earth.png"></a></li>
+            <img class="planet earth" src="@routes.Assets.at("img/earth.png")"></a></li>
             <li class="layer" data-depth="0.70"><a href="@routes.Application.venus()">
-            <img class="planet venus" src="/assets/img/venus.png"></a></li>
+            <img class="planet venus" src="@routes.Assets.at("img/venus.png")"></a></li>
             <li class="layer" data-depth="0.80"><a href="@routes.Application.mercury()">
-            <img class="planet mercury" src="/assets/img/mercury.png"></a></li>
+            <img class="planet mercury" src="@routes.Assets.at("img/mercury.png")"></a></li>
         </ul>
     </div>
 
 
-    <script src="@routes.Assets.at("/js/parallax.js")"></script>
+    <script src="@routes.Assets.at("js/parallax.js")"></script>
     <script>
         // parallax.js parameters
         var scene = document.getElementById('scene');
