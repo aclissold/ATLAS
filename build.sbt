@@ -1,4 +1,4 @@
-name := "assignment4"
+name := "ATLAS"
 
 version := "1.0-SNAPSHOT"
 
