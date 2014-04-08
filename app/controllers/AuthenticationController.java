@@ -28,6 +28,7 @@ public class AuthenticationController extends Controller {
             session().clear();
             session("email", form.get().email);
             session("fullname", user.firstName + ", " + user.lastName);
+            session("role", user.role.toString());
             return redirect(routes.SpaceProductController.list());
         }
     }

@@ -10,6 +10,7 @@ import models.*;
 import views.html.*;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class SpaceProductController extends Controller {
 
