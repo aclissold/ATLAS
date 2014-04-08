@@ -18,6 +18,14 @@ GET     /planets/saturn             controllers.Application.saturn()
 GET     /planets/neptune            controllers.Application.neptune()
 GET     /planets/uranus             controllers.Application.uranus()
 
+# Authentication routes
+GET     /login                      controllers.AuthenticationController.login()
+POST    /authenticate               controllers.AuthenticationController.authenticate()
+GET     /logout                     controllers.AuthenticationController.logout()
+
+# Routes for user class
+GET     /user/register              controllers.UserController.register()
+POST    /user/save                  controllers.UserController.save()
 
 
 # Custom pages
