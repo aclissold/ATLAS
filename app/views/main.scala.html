@@ -50,9 +50,12 @@
                     <h1 class="description-title">@page</h1>
                     <p class="description-text hyphenate">@content</p>
                 </div>
-                @for(comment <- comments) {
-                  <p>@comment.user: @comment.text</p>
-                }
+                <div class="comment-box">
+                    <h3>Comments</h3>
+                    @for(comment <- comments) {
+                        <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
+                    }
+                </div>
             }
         }
         @navbar(page)

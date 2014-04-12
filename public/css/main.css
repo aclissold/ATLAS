@@ -11,6 +11,29 @@ body {
     text-transform: uppercase;
 }
 
+.comment-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -o-border-radius: 15px;
+    max-width: 600px;
+    margin: 100px auto 140px;
+    z-index: 1;
+}
+
+.comment-box>h3 {
+    color: #222;
+    text-align: right;
+    padding: 0.5em 0.5em 0 0;
+    padding-bottom: 40px;
+}
+
+.comment {
+    padding: 5px 10px;
+    margin: 0;
+}
+
 .description-box {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
