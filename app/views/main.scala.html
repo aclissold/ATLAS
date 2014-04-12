@@ -1,4 +1,4 @@
-@(page: String)(content: Html)
+@(page: String, comments: List[Comment])(content: Html)
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -39,11 +39,21 @@
     <body>
         @if(page == "Index") {
             @content
-        } else {
+        } else { @if(page == "About" || page == "Contact") {
             <div class="description-box">
                 <h1 class="description-title">@page</h1>
                 <p class="description-text hyphenate">@content</p>
+                <p>@comments</p>
             </div>
+            } else {
+                <div class="description-box">
+                    <h1 class="description-title">@page</h1>
+                    <p class="description-text hyphenate">@content</p>
+                </div>
+                @for(comment <- comments) {
+                  <p>@comment.user: @comment.text</p>
+                }
+            }
         }
         @navbar(page)
         <script>Hyphenator.run();</script>
