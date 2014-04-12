@@ -68,43 +68,43 @@ body {
 }
 
 .description-planet.mercury {
-    padding-left: 190px;
-    margin-top: -247px;
+    left: 190px;
+    top: 335px;
 }
 
 .description-planet.venus {
-    padding-left: 162px;
-    margin-top: -275px;
+    left: 162px;
+    top: 335px;
 }
 
 .description-planet.earth {
-    padding-left: 166px;
-    margin-top: -281px;
+    left: 166px;
+    top: 335px;
 }
 
 .description-planet.mars {
-    padding-left: 160px;
-    margin-top: -270px;
+    left: 160px;
+    top: 335px;
 }
 
 .description-planet.jupiter {
-    padding-left: 43px;
-    margin-top: -398px;
+    left: 43px;
+    top: 245px;
 }
 
 .description-planet.saturn {
-    padding-left: 26px;
-    margin-top: -338px;
+    left: 26px;
+    top: 275px;
 }
 
 .description-planet.uranus {
-    padding-left: 190px;
-    margin-top: -295px;
+    left: 190px;
+    top: 245px;
 }
 
 .description-planet.neptune {
-    padding-left: 203px;
-    margin-top: -231px;
+    left: 203px;
+    top: 270px;
 }
 
 .dropdown-menu {
