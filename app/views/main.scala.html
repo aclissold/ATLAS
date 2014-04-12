@@ -51,6 +51,7 @@
                     <p class="description-text hyphenate">@content</p>
                 </div>
                 <div class="comment-box">
+                    <a class="btn btn-primary" href="#">Add comment...</a>
                     <h3>Comments</h3>
                     @for(comment <- comments) {
                         <p class="comment"><strong>@comment.user:</strong> @comment.text</p>

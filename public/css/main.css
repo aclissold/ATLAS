@@ -29,6 +29,22 @@ body {
     padding-bottom: 40px;
 }
 
+.comment-box .btn-primary {
+    background-color: #222;
+    border-color: #080808;
+    border-radius: 15px 0 0 0;
+    color: #999;
+    -webkit-border-radius: 15px 0 0 0;
+    -moz-border-radius: 15px 0 0 0;
+    -o-border-radius: 15px 0 0 0;
+    position: absolute;
+}
+
+.comment-box .btn-primary:active, .comment-box .btn-primary:hover, .comment-box .btn-primary:focus {
+    background-color: #080808;
+    color: #fff;
+}
+
 .comment {
     padding: 5px 10px;
     margin: 0;
