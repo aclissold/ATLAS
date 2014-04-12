@@ -1,4 +1,4 @@
-@(page: String, pageAuthor: String)(content: Html)
+@(page: String)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -45,7 +45,7 @@
                 <p class="description-text hyphenate">@content</p>
             </div>
         }
-        @navbar(page, pageAuthor)
+        @navbar(page)
         <script>Hyphenator.run();</script>
     </body>
 </html>
