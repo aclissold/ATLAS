@@ -150,6 +150,13 @@ body {
     color: #999;
 }
 
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:active
+.dropdown-menu>.active>a:hover
+.dropdown-menu>.active>a:focus {
+    background-color: #222;
+}
+
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
     color: #999;
     background-color: #222;
