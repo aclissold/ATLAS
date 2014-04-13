@@ -74,7 +74,12 @@
                         <p class="comment"><strong>No comments yet!</strong> Create an account to be the first to post.</p>
                     }
                     @for(comment <- comments) {
-                        <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
+                        <p class="comment">
+                        @if(comment.user == session.get("username")) {
+                            <span class="glyphicon glyphicon-trash"></span>
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        }
+                        <strong>@comment.user:</strong> @comment.text </p>
                     }
                 </div>
             }
