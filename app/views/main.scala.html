@@ -43,7 +43,6 @@
             <div class="description-box">
                 <h1 class="description-title">@page</h1>
                 <p class="description-text hyphenate">@content</p>
-                <p>@comments</p>
             </div>
             } else {
                 <div class="description-box">
@@ -51,8 +50,12 @@
                     <p class="description-text hyphenate">@content</p>
                 </div>
                 <div class="comment-box">
-                    <a class="btn btn-primary" href="#">Add comment...</a>
+                    <a class="btn btn-primary" id="add-comment-btn" href="#">Add comment...</a>
                     <h3>Comments</h3>
+                    <div class="add-comment-area">
+                        <input type="submit" value="Save" class="btn btn-primary" id="save-comment-btn" href="#"></input>
+                        <textarea class="form-control"></textarea>
+                    </div>
                     @for(comment <- comments) {
                         <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
                     }

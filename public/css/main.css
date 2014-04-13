@@ -29,20 +29,35 @@ body {
     padding-bottom: 40px;
 }
 
-.comment-box .btn-primary {
+.btn-primary {
     background-color: #222;
     border-color: #080808;
-    border-radius: 15px 0 0 0;
     color: #999;
+}
+
+.btn-primary:active, .btn-primary:hover, .btn-primary:focus {
+    border-color: #080808;
+    background-color: #080808;
+}
+
+#add-comment-btn, #save-comment-btn {
+    border-radius: 15px 0 0 0;
     -webkit-border-radius: 15px 0 0 0;
     -moz-border-radius: 15px 0 0 0;
     -o-border-radius: 15px 0 0 0;
+}
+
+#add-comment-btn {
     position: absolute;
 }
 
-.comment-box .btn-primary:active, .comment-box .btn-primary:hover, .comment-box .btn-primary:focus {
+#add-comment-btn:active, #add-comment-btn:hover, #add-comment-btn:focus {
     background-color: #080808;
     color: #fff;
+}
+
+#save-comment-btn {
+    float: right;
 }
 
 .comment {
