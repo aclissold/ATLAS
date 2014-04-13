@@ -28,23 +28,25 @@ public class Application extends Controller {
             // Read form data
             Form<Comment> form = Form.form(Comment.class).bindFromRequest();
 
+            String page = form.field("page").value();
+            String previousURL = "/planets/" + page.toLowerCase();
+
             // If errors, return the form
             if(form.hasErrors()) {
                 System.out.println(form.errors());
-                return badRequest("Error processing form");
+                flash("danger", "There was an error with your request.");
+                return redirect(previousURL);
             } else {
-                String page = form.field("page").value();
-                String previousURL = "/planets/" + page.toLowerCase();
                 String text = form.field("text").value();
 
                 Comment comment = form.get();
                 comment.save();
 
-                flash("success", "Comment saved successfully");
+                flash("success", "Comment saved successfully.");
                 return redirect(previousURL);
             }
         } else {
-            flash("danger", "Invalid HTTP method");
+            flash("danger", "Invalid HTTP method.");
             return redirect(routes.Application.index());
         }
     }

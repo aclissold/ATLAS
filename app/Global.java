@@ -12,5 +12,8 @@ public class Global extends GlobalSettings {
         if (Comment.find.findRowCount() == 0) {
             Ebean.save(all.get("comments"));
         }
+        if (User.find.findRowCount() == 0) {
+            Ebean.save(all.get("users"));
+        }
     }
 }

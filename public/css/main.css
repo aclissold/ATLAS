@@ -18,6 +18,19 @@ body {
     margin-top: -95px;
 }
 
+.auth.button-group, .auth.form-control {
+    margin: 0 auto 10px;
+}
+
+.auth.button-group {
+    max-width: 150px;
+    padding-bottom: 10px;
+}
+
+.auth.form-control {
+    max-width: 450px;
+}
+
 .comment-box {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
@@ -137,6 +150,13 @@ body {
     color: #999;
 }
 
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:active
+.dropdown-menu>.active>a:hover
+.dropdown-menu>.active>a:focus {
+    background-color: #222;
+}
+
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
     color: #999;
     background-color: #222;
@@ -169,6 +189,12 @@ p.description-text {
 	margin-top: 35%;
   	text-shadow: 3px 3px 3px #222;
   	opacity: 0.65;
+}
+
+.navbar-nav>li>em {
+    display: block;
+    padding: 15px 0 15px 15px;
+    color: #999;
 }
 
 .tagline {

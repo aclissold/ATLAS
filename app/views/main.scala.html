@@ -45,7 +45,7 @@
         }
         @if(page == "Index") {
             @content
-        } else { @if(page == "About" || page == "Contact") {
+        } else { @if(comments == null) {
             <div class="description-box">
                 <h1 class="description-title">@page</h1>
                 <p class="description-text hyphenate">@content</p>
@@ -56,16 +56,23 @@
                     <p class="description-text hyphenate">@content</p>
                 </div>
                 <div class="comment-box">
-                    <a class="btn btn-primary" id="add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
-                    <h3>Comments</h3>
-                    <div class="add-comment-area">
-                        <form role="form" action="@routes.Application.saveComment" method="post">
-                            <button type="submit" class="btn btn-primary" id="save-comment-btn" href="#">Save</button>
-                            <input type="hidden" name="page" value="@page"></input>
-                            <input type="hidden" name="user" value="Andrew"></input>
-                            <textarea class="form-control" name="text"></textarea>
-                        </form>
-                    </div>
+                    @if(session.get("username")) {
+                        <a class="btn btn-primary" id="add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
+                        <h3>Comments</h3>
+                        <div class="add-comment-area">
+                            <form role="form" action="@routes.Application.saveComment" method="post">
+                                <button type="submit" class="btn btn-primary" id="save-comment-btn" href="#">Save</button>
+                                <input type="hidden" name="page" value="@page"></input>
+                                <input type="hidden" name="user" value="@session.get("username")"></input>
+                                <textarea class="form-control" name="text"></textarea>
+                            </form>
+                        </div>
+                    } else {
+                        <h3>Comments</h3>
+                    }
+                    @if(comments.size() == 0) {
+                        <p class="comment"><strong>No comments yet!</strong> Create an account to be the first to post.</p>
+                    }
                     @for(comment <- comments) {
                         <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
                     }

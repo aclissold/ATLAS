@@ -1,0 +1,21 @@
+@main("Log In", null) {
+    <form role="form" id="form" action="" method="post">
+        <input class="auth form-control" type="text" placeholder="Username" required="" name="username"></input>
+        <input class="auth form-control" type="password" placeholder="Password" required="" name="password"></input>
+        <div class="auth button-group">
+            <button class="btn btn-primary" onclick="login()">Log in</button>
+            <button class="btn btn-primary pull-right" onclick="register()">Register</button>
+        </div>
+    </form>
+    <script>
+        var form = document.getElementById('form');
+        function login() {
+            form.action = '@routes.UserController.authenticate()';
+            form.submit;
+        }
+        function register() {
+            form.action = '@routes.UserController.save()';
+            form.submit;
+        }
+    </script>
+}
