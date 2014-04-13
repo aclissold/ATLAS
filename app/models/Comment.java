@@ -2,7 +2,7 @@ package models;
 
 import java.util.List;
 
-import play.data.validation.Constraints;
+import play.data.validation.Constraints.*;
 import play.db.ebean.Model;
 
 import javax.persistence.Entity;
@@ -14,13 +14,14 @@ public class Comment extends Model {
     @Id
     public Long id;
 
-    @Constraints.Required
+    @Required
     public String user;
 
-    @Constraints.Required
+    @Required
     public String page;
 
-    @Constraints.Required
+    @Required
+    @MaxLength(255)
     public String text;
 
     /* Default finder */

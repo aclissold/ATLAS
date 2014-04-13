@@ -28,15 +28,10 @@ public class Application extends Controller {
             // Read form data
             Form<Comment> form = Form.form(Comment.class).bindFromRequest();
 
-            // Reject it if it's blank
-            // if(!form.field("text").valueOr("").isEmpty()) {
-            //     form.reject("text", "Cannot be empty");
-            // }
-
             // If errors, return the form
             if(form.hasErrors()) {
                 System.out.println(form.errors());
-                return badRequest("Error: bad request");
+                return badRequest("Error processing form");
             } else {
                 String page = form.field("page").value();
                 String previousURL = "/planets/" + page.toLowerCase();
