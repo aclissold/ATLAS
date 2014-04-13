@@ -70,6 +70,9 @@
                     } else {
                         <h3>Comments</h3>
                     }
+                    @if(comments.size() == 0) {
+                        <p class="comment"><strong>No comments yet!</strong> Create an account to be the first to post.</p>
+                    }
                     @for(comment <- comments) {
                         <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
                     }
