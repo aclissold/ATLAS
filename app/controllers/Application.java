@@ -1,8 +1,12 @@
 package controllers;
 
+import java.util.List;
+
 import play.*;
+import play.data.Form;
 import play.mvc.*;
 
+import models.Comment;
 import views.html.*;
 
 public class Application extends Controller {
@@ -19,38 +23,69 @@ public class Application extends Controller {
         return ok(contact.render());
     }
 
+    public static Result saveComment() {
+        if(request().method() == "POST") {
+            // Read form data
+            Form<Comment> form = Form.form(Comment.class).bindFromRequest();
+
+            // If errors, return the form
+            if(form.hasErrors()) {
+                System.out.println(form.errors());
+                return badRequest("Error processing form");
+            } else {
+                String page = form.field("page").value();
+                String previousURL = "/planets/" + page.toLowerCase();
+                String text = form.field("text").value();
+
+                Comment comment = form.get();
+                comment.save();
+
+                return redirect(previousURL);
+            }
+        } else {
+            flash("danger", "Invalid HTTP method");
+            return redirect(routes.Application.index());
+        }
+    }
+
     public static Result mercury() {
-        return ok(mercury.render());
+        List<Comment> comments = Comment.findByPage("Mercury");
+        return ok(mercury.render(comments));
     }
 
     public static Result venus() {
-        return ok(venus.render());
+        List<Comment> comments = Comment.findByPage("Venus");
+        return ok(venus.render(comments));
     }
 
     public static Result earth() {
-        return ok(earth.render());
+        List<Comment> comments = Comment.findByPage("Earth");
+        return ok(earth.render(comments));
     }
 
     public static Result mars() {
-        return ok(mars.render());
+        List<Comment> comments = Comment.findByPage("Mars");
+        return ok(mars.render(comments));
     }
 
     public static Result jupiter() {
-        return ok(jupiter.render());
+        List<Comment> comments = Comment.findByPage("Jupiter");
+        return ok(jupiter.render(comments));
     }
 
     public static Result saturn() {
-        return ok(saturn.render());
+        List<Comment> comments = Comment.findByPage("Saturn");
+        return ok(saturn.render(comments));
     }
 
     public static Result neptune() {
-        return ok(neptune.render());
+        List<Comment> comments = Comment.findByPage("Neptune");
+        return ok(neptune.render(comments));
     }
 
     public static Result uranus() {
-        return ok(uranus.render());
+        List<Comment> comments = Comment.findByPage("Uranus");
+        return ok(uranus.render(comments));
     }
-
-
 
 }

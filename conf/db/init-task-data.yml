@@ -1,0 +1,12 @@
+# Page Comments
+comments:
+  - !!models.Comment
+    user: "Andrew"
+    page: "Saturn"
+    text: "Saturn is also the coolest movement of Holst's \"The Planets\"!"
+
+  - !!models.Comment
+    user: "Rachel"
+    page: "Saturn"
+    text: "I'm Rachel and I'm leaving a comment so we can see if two comments display properly."
+

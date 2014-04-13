@@ -1,4 +1,4 @@
-@(page: String, pageAuthor: String)(content: Html)
+@(page: String, comments: List[Comment])(content: Html)
 
 <!DOCTYPE html>
 <html lang="en-us">
@@ -39,13 +39,51 @@
     <body>
         @if(page == "Index") {
             @content
-        } else {
+        } else { @if(page == "About" || page == "Contact") {
             <div class="description-box">
                 <h1 class="description-title">@page</h1>
                 <p class="description-text hyphenate">@content</p>
             </div>
+            } else {
+                <div class="description-box">
+                    <h1 class="description-title">@page</h1>
+                    <p class="description-text hyphenate">@content</p>
+                </div>
+                <div class="comment-box">
+                    <a class="btn btn-primary" id="add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
+                    <h3>Comments</h3>
+                    <div class="add-comment-area">
+                        <form role="form" action="@routes.Application.saveComment" method="post">
+                            <button type="submit" class="btn btn-primary" id="save-comment-btn" href="#">Save</button>
+                            <input type="hidden" name="page" value="@page"></input>
+                            <input type="hidden" name="user" value="Andrew"></input>
+                            <textarea class="form-control" name="text"></textarea>
+                        </form>
+                    </div>
+                    @for(comment <- comments) {
+                        <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
+                    }
+                </div>
+            }
         }
-        @navbar(page, pageAuthor)
+        @navbar(page)
         <script>Hyphenator.run();</script>
+        <script>
+            function toggleAddCommentArea() {
+                if ($('#add-comment-btn').text() === 'Cancel') {
+                    $('#add-comment-btn').text('Add comment...');
+                    $('.add-comment-area').css({
+                        'margin-top': '-95px',
+                        'opacity': 0
+                    });
+                } else {
+                    $('#add-comment-btn').text('Cancel');
+                    $('.add-comment-area').css({
+                        'margin-top': '0',
+                        'opacity': 1
+                    });
+                }
+           }
+        </script>
     </body>
 </html>
