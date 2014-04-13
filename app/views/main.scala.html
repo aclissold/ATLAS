@@ -53,8 +53,12 @@
                     <a class="btn btn-primary" id="add-comment-btn" href="#">Add comment...</a>
                     <h3>Comments</h3>
                     <div class="add-comment-area">
-                        <input type="submit" value="Save" class="btn btn-primary" id="save-comment-btn" href="#"></input>
-                        <textarea class="form-control"></textarea>
+                        <form role="form" action="@routes.Application.saveComment" method="post">
+                            <button type="submit" class="btn btn-primary" id="save-comment-btn" href="#">Save</button>
+                            <input type="hidden" name="page" value="@page"></input>
+                            <input type="hidden" name="user" value="Andrew"></input>
+                            <textarea class="form-control" name="text"></textarea>
+                        </form>
                     </div>
                     @for(comment <- comments) {
                         <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
