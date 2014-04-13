@@ -10,3 +10,7 @@ comments:
     page: "Saturn"
     text: "I'm Rachel and I'm leaving a comment so we can see if two comments display properly."
 
+users:
+  - !!models.User
+    username: "ATLAS"
+    password: "ATLAS"

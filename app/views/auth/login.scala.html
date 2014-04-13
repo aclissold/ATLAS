@@ -1,5 +1,5 @@
 @main("Log In", null) {
-    <form action="">
+    <form role="form" action="@routes.UserController.authenticate()" method="post">
         <input class="auth form-control" type="text" placeholder="Username" required="" name="username"></input>
         <input class="auth form-control" type="password" placeholder="Password" required="" name="password"></input>
         <div class="auth button-group">
