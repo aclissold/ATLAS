@@ -30,6 +30,12 @@
                     <li><a href="@routes.Application.neptune()">Neptune</a></li>
                 </ul>
             </li>
+            @if(false) {
+                <li><em>Welcome, Andrew!</em></li>
+                <li><a href="#">Log out</a></li>
+            } else {
+                <li><a href="@routes.UserController.login()">Log in</a></li>
+            }
 
         </ul>
 

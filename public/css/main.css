@@ -18,6 +18,19 @@ body {
     margin-top: -95px;
 }
 
+.auth.button-group, .auth.form-control {
+    margin: 0 auto 10px;
+}
+
+.auth.button-group {
+    max-width: 150px;
+    padding-bottom: 10px;
+}
+
+.auth.form-control {
+    max-width: 450px;
+}
+
 .comment-box {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 15px;

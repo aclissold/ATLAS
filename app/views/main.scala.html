@@ -45,7 +45,7 @@
         }
         @if(page == "Index") {
             @content
-        } else { @if(page == "About" || page == "Contact") {
+        } else { @if(comments == null) {
             <div class="description-box">
                 <h1 class="description-title">@page</h1>
                 <p class="description-text hyphenate">@content</p>
