@@ -32,7 +32,8 @@ public class UserController extends Controller {
 
         if (form.hasErrors()) {
             System.out.println((form.errors()));
-            return badRequest("Error processing form");
+            flash("danger", "Authentication failed.");
+            return redirect(routes.UserController.login());
         } else {
             User user = User.findByUsername(form.get().username);
             session().clear();
@@ -53,7 +54,8 @@ public class UserController extends Controller {
 
         if (form.hasErrors()) {
             System.out.println(form.errors());
-            return badRequest("Error processing form");
+            flash("danger", "There was an error with your request.");
+            return redirect(routes.UserController.login());
         }
 
         User user = form.get();
