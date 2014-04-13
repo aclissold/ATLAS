@@ -37,6 +37,12 @@
         <![endif]-->
     </head>
     <body>
+        <!-- Flash message -->
+        @if(flash.size() > 0){
+            @for((key, value) <- flash){
+                <div class="alert alert-@key">@value</div>
+            }
+        }
         @if(page == "Index") {
             @content
         } else { @if(page == "About" || page == "Contact") {

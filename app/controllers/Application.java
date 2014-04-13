@@ -40,6 +40,7 @@ public class Application extends Controller {
                 Comment comment = form.get();
                 comment.save();
 
+                flash("success", "Comment saved successfully");
                 return redirect(previousURL);
             }
         } else {
