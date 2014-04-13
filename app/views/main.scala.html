@@ -50,7 +50,7 @@
                     <p class="description-text hyphenate">@content</p>
                 </div>
                 <div class="comment-box">
-                    <a class="btn btn-primary" id="add-comment-btn" href="#">Add comment...</a>
+                    <a class="btn btn-primary" id="add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
                     <h3>Comments</h3>
                     <div class="add-comment-area">
                         <form role="form" action="@routes.Application.saveComment" method="post">
@@ -68,5 +68,22 @@
         }
         @navbar(page)
         <script>Hyphenator.run();</script>
+        <script>
+            function toggleAddCommentArea() {
+                if ($('#add-comment-btn').text() === 'Cancel') {
+                    $('#add-comment-btn').text('Add comment...');
+                    $('.add-comment-area').css({
+                        'margin-top': '-95px',
+                        'opacity': 0
+                    });
+                } else {
+                    $('#add-comment-btn').text('Cancel');
+                    $('.add-comment-area').css({
+                        'margin-top': '0',
+                        'opacity': 1
+                    });
+                }
+           }
+        </script>
     </body>
 </html>

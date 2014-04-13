@@ -11,6 +11,13 @@ body {
     text-transform: uppercase;
 }
 
+.add-comment-area {
+    transition: 0.40s linear;
+    -webkit-transition: 0.25s linear;
+    opacity: 0;
+    margin-top: -95px;
+}
+
 .comment-box {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 15px;
@@ -26,7 +33,6 @@ body {
     color: #222;
     text-align: right;
     padding: 0.5em 0.5em 0 0;
-    padding-bottom: 40px;
 }
 
 .btn-primary {
@@ -49,6 +55,7 @@ body {
 
 #add-comment-btn {
     position: absolute;
+    z-index: 1;
 }
 
 #add-comment-btn:active, #add-comment-btn:hover, #add-comment-btn:focus {
