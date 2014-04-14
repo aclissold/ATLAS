@@ -176,6 +176,7 @@ p.description-text {
 
 .glyphicon:active, .glyphicon:hover, .glyphicon:focus {
     color: #555;
+    cursor: pointer;
 }
 
 .logo {

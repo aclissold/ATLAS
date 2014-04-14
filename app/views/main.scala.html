@@ -60,7 +60,7 @@
                         <a class="btn btn-primary" id="add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
                         <h3>Comments</h3>
                         <div class="add-comment-area">
-                            <form role="form" action="@routes.Application.saveComment" method="post">
+                            <form role="form" action="@routes.CommentController.save" method="post">
                                 <button type="submit" class="btn btn-primary" id="save-comment-btn" href="#">Save</button>
                                 <input type="hidden" name="page" value="@page"></input>
                                 <input type="hidden" name="user" value="@session.get("username")"></input>
