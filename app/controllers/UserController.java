@@ -59,8 +59,12 @@ public class UserController extends Controller {
         }
 
         User user = form.get();
-        user.save();
-        flash("success", "Account created successfully!");
+        if (User.findByUsername(user.username) == null) {
+            user.save();
+            flash("success", "Account created successfully!");
+        } else {
+            flash("danger", "Sorry, that username is already taken.");
+        }
         return redirect(routes.UserController.login());
     }
 
