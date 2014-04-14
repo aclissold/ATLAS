@@ -44,6 +44,7 @@ public class CommentController extends Controller {
         if (comment == null) {
             flash("danger", "Error: attempted to delete nonexistent comment.");
         } else {
+            flash("success", "Comment deleted successfully.");
             comment.delete();
         }
         return redirect(request().getHeader("referer"));

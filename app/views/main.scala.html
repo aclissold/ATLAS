@@ -76,8 +76,8 @@
                     @for(comment <- comments) {
                         <p class="comment">
                         @if(comment.user == session.get("username")) {
-                            <span class="glyphicon glyphicon-trash"></span>
-                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="glyphicon glyphicon-trash" onclick="window.location = '/comment/delete/@comment.id'"></span>
+                            <span class="glyphicon glyphicon-pencil" onclick="window.location = '/comment/edit/@comment.id'"></span>
                         }
                         <strong>@comment.user:</strong> @comment.text </p>
                     }
