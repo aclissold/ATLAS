@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.Map;
+
 import play.*;
 import play.mvc.*;
 
@@ -43,6 +45,22 @@ public class CommentController extends Controller {
             return redirect(request().getHeader("referer"));
         }
         return ok(views.html.editComment.render(comment));
+    }
+
+    public static Result update() {
+        if(request().method() == "POST") {
+            final Map<String,String[]> values = request().body().asFormUrlEncoded();
+            Long id = Long.parseLong(values.get("id")[0]);
+            Comment comment = Comment.find.byId(id);
+            comment.text = values.get("text")[0];
+            comment.save();
+            flash("success", "Comment updated successfully.");
+            return redirect("/planets/" + comment.page.toLowerCase());
+        } else {
+            flash("danger", "Invalid HTTP method.");
+            return redirect(routes.Application.index());
+        }
+
     }
 
     public static Result delete(Long id) {
