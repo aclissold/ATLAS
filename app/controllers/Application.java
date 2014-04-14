@@ -7,6 +7,7 @@ import play.data.Form;
 import play.mvc.*;
 
 import models.Comment;
+
 import views.html.*;
 
 public class Application extends Controller {
@@ -21,34 +22,6 @@ public class Application extends Controller {
 
     public static Result contact() {
         return ok(contact.render());
-    }
-
-    public static Result saveComment() {
-        if(request().method() == "POST") {
-            // Read form data
-            Form<Comment> form = Form.form(Comment.class).bindFromRequest();
-
-            String page = form.field("page").value();
-            String previousURL = "/planets/" + page.toLowerCase();
-
-            // If errors, return the form
-            if(form.hasErrors()) {
-                System.out.println(form.errors());
-                flash("danger", "There was an error with your request.");
-                return redirect(previousURL);
-            } else {
-                String text = form.field("text").value();
-
-                Comment comment = form.get();
-                comment.save();
-
-                flash("success", "Comment saved successfully.");
-                return redirect(previousURL);
-            }
-        } else {
-            flash("danger", "Invalid HTTP method.");
-            return redirect(routes.Application.index());
-        }
     }
 
     public static Result mercury() {

@@ -48,6 +48,10 @@ body {
     padding: 0.5em 0.5em 0 0;
 }
 
+.edit-comment-form {
+    padding-bottom: 50px;
+}
+
 .btn-primary {
     background-color: #222;
     border-color: #080808;
@@ -59,24 +63,24 @@ body {
     background-color: #080808;
 }
 
-#add-comment-btn, #save-comment-btn {
+.add-comment-btn, .save-comment-btn {
     border-radius: 15px 0 0 0;
     -webkit-border-radius: 15px 0 0 0;
     -moz-border-radius: 15px 0 0 0;
     -o-border-radius: 15px 0 0 0;
 }
 
-#add-comment-btn {
+.add-comment-btn {
     position: absolute;
     z-index: 1;
 }
 
-#add-comment-btn:active, #add-comment-btn:hover, #add-comment-btn:focus {
+.add-comment-btn:active, .add-comment-btn:hover, .add-comment-btn:focus {
     background-color: #080808;
     color: #fff;
 }
 
-#save-comment-btn {
+.save-comment-btn {
     float: right;
 }
 
@@ -172,6 +176,11 @@ p.description-text {
     font-size: 20pt;
     padding: 0 0.5em 0.5em 0.5em;
     text-align: justify;
+}
+
+.glyphicon:active, .glyphicon:hover, .glyphicon:focus {
+    color: #555;
+    cursor: pointer;
 }
 
 .logo {

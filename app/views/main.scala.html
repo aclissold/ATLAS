@@ -57,11 +57,11 @@
                 </div>
                 <div class="comment-box">
                     @if(session.get("username")) {
-                        <a class="btn btn-primary" id="add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
+                        <a class="btn btn-primary add-comment-btn" onclick="toggleAddCommentArea()">Add comment...</a>
                         <h3>Comments</h3>
                         <div class="add-comment-area">
-                            <form role="form" action="@routes.Application.saveComment" method="post">
-                                <button type="submit" class="btn btn-primary" id="save-comment-btn" href="#">Save</button>
+                            <form role="form" action="@routes.CommentController.save" method="post">
+                                <button type="submit" class="btn btn-primary save-comment-btn" href="#">Save</button>
                                 <input type="hidden" name="page" value="@page"></input>
                                 <input type="hidden" name="user" value="@session.get("username")"></input>
                                 <textarea class="form-control" name="text"></textarea>
@@ -74,7 +74,12 @@
                         <p class="comment"><strong>No comments yet!</strong> Create an account to be the first to post.</p>
                     }
                     @for(comment <- comments) {
-                        <p class="comment"><strong>@comment.user:</strong> @comment.text</p>
+                        <p class="comment">
+                        @if(comment.user == session.get("username")) {
+                            <span class="glyphicon glyphicon-trash" onclick="window.location = '/comment/delete/@comment.id'"></span>
+                            <span class="glyphicon glyphicon-pencil" onclick="window.location = '/comment/edit/@comment.id'"></span>
+                        }
+                        <strong>@comment.user:</strong> @comment.text </p>
                     }
                 </div>
             }
@@ -83,14 +88,14 @@
         <script>Hyphenator.run();</script>
         <script>
             function toggleAddCommentArea() {
-                if ($('#add-comment-btn').text() === 'Cancel') {
-                    $('#add-comment-btn').text('Add comment...');
+                if ($('.add-comment-btn').text() === 'Cancel') {
+                    $('.add-comment-btn').text('Add comment...');
                     $('.add-comment-area').css({
                         'margin-top': '-95px',
                         'opacity': 0
                     });
                 } else {
-                    $('#add-comment-btn').text('Cancel');
+                    $('.add-comment-btn').text('Cancel');
                     $('.add-comment-area').css({
                         'margin-top': '0',
                         'opacity': 1

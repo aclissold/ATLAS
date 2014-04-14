@@ -20,7 +20,10 @@ GET     /planets/neptune            controllers.Application.neptune()
 GET     /planets/uranus             controllers.Application.uranus()
 
 # Saving comments
-POST    /comment/save               controllers.Application.saveComment()
+POST    /comment/save               controllers.CommentController.save()
+GET     /comment/delete/:id         controllers.CommentController.delete(id: Long)
+GET     /comment/edit/:id           controllers.CommentController.edit(id: Long)
+POST    /comment/update             controllers.CommentController.update()
 
 # Authentication
 GET     /login                      controllers.UserController.login()
