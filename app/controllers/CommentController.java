@@ -16,14 +16,11 @@ public class CommentController extends Controller {
             // Read form data
             Form<Comment> form = Form.form(Comment.class).bindFromRequest();
 
-            String page = form.field("page").value();
-            String previousURL = "/planets/" + page.toLowerCase();
-
             // If errors, return the form
             if(form.hasErrors()) {
                 System.out.println(form.errors());
                 flash("danger", "There was an error with your request.");
-                return redirect(previousURL);
+                return redirect(request().getHeader("referer"));
             } else {
                 String text = form.field("text").value();
 
@@ -31,12 +28,21 @@ public class CommentController extends Controller {
                 comment.save();
 
                 flash("success", "Comment saved successfully.");
-                return redirect(previousURL);
+                return redirect("/planets/" + comment.page.toLowerCase());
             }
         } else {
             flash("danger", "Invalid HTTP method.");
             return redirect(routes.Application.index());
         }
+    }
+
+    public static Result edit(Long id) {
+        Comment comment = Comment.find.byId(id);
+        if (comment == null) {
+            flash("danger", "Specified comment does not exist.");
+            return redirect(request().getHeader("referer"));
+        }
+        return ok(views.html.editComment.render(comment));
     }
 
     public static Result delete(Long id) {

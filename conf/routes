@@ -22,6 +22,7 @@ GET     /planets/uranus             controllers.Application.uranus()
 # Saving comments
 POST    /comment/save               controllers.CommentController.save()
 GET     /comment/delete/:id         controllers.CommentController.delete(id: Long)
+GET     /comment/edit/:id           controllers.CommentController.edit(id: Long)
 
 # Authentication
 GET     /login                      controllers.UserController.login()

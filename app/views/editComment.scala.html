@@ -1,0 +1,10 @@
+@(comment: Comment)
+
+@main("Edit Comment", null) {
+    <form class="edit-comment-form" action=@routes.CommentController.save() method="post">
+        <input type="hidden" name="user" value="@session.get("username")"></input>
+        <input type="hidden" name="page" value="@comment.page"></input>
+        <textarea class="form-control" name="text" rows="5">@comment.text</textarea>
+        <button class="btn btn-primary pull-right" type="submit">Save</button>
+    </form>
+}
