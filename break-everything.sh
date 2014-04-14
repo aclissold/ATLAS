@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for i in {1..300}
 do
     curl "localhost:9000/comment/delete/$i"
